@@ -1,11 +1,14 @@
 @media (max-width:900px) {
     #page-home {
         background-image: url();
+        background-position: center;
+        position: relative;
     }
 
     #page-home .content {
         align-items: center;
         text-align: center;
+        position: relative;
     }
 
     #page-home header a {
@@ -46,5 +49,29 @@
 @media (max-height: 850px) {
     #page-home {
         background-position-y: 100px;
+    }
+}
+
+@media (max-width: 700px){
+    #page-create-point {
+        width: 650px;
+    }
+}
+
+@media (max-height: 640px) {
+    #page-home {
+        height: 640px;
+    }
+}
+
+@media (max-width: 450px){
+    #page-home header a {
+        bottom: 0px;
+    }
+}
+
+@media (max-width: 320px){
+    body {
+        width: 320px;
     }
 }
