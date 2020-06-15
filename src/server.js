@@ -1,23 +1,17 @@
 const express = require("express")
 const server = express()
 const nunjucks = require("nunjucks")
+const routes = require("./routes")
 
 server.use(express.static("public"))
+server.use(express.urlencoded({extended: true}))
+server.use(routes)
 
-nunjucks.configure("src/views", {
+nunjucks.configure("src/app/views", {
     express: server,
     noCache: true
 })
 
-server.get("/", function(req,res){
-    return res.render("index.html")
-})
-server.get("/create-point", function(req,res){
-    return res.render("create-point.html")
-})
 
-server.get("/search-results", function(req,res){
-    return res.render("search-results.html")
-})
 
 server.listen(3000)
