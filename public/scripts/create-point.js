@@ -27,6 +27,8 @@ function getCities(event){
     citySelect.innerHTML = "<option value>Selecione um Estado</option>"
     citySelect.disabled = true
 
+    
+
     fetch(url)
     .then( res => res.json())
     .then( cities => {
@@ -48,7 +50,7 @@ for (let item of itemToCollect) {
     item.addEventListener("click", handleSelectedItem)
 }
 
-const collectedItems = document.querySelector("input[name=items")
+const collectedItems = document.querySelector("input[name=items]")
 
 let selectedItems = []
 
