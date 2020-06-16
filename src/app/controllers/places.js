@@ -17,12 +17,16 @@ module.exports = {
             address2,
             state,
             city,
-            items
+            items,
+            email,
+            whatsapp
         ) VALUES (
-            $1, $2, $3, $4, $5, $6, $7
+            $1, $2, $3, $4, $5, $6, $7, $8, $9
         )
         
         RETURNING id`
+
+        console.log(data.city[0])
     
         const values = [
             data.image,
@@ -30,8 +34,10 @@ module.exports = {
             data.address,
             data.address2,
             data.state,
-            data.city,
-            data.items
+            data.city[0],
+            data.items,
+            data.email,
+            data.whatsapp
         ]
     
         db.query(query, values, function(err, results){
