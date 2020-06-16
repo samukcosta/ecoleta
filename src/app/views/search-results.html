@@ -39,8 +39,12 @@
                             <br>
                             {{place.address2}}
                         </p>
-                    </div>
+                        <div class="contact">
+                            <a href="mailto:{{place.email}}"><img src="/icones/email.svg" alt="Email para Contato"></a>
+                            <a href="http://api.whatsapp.com/send?1=pt_BR&phone=55{{place.whatsapp}}" target="_blank"><img src="/icones/whatsapp.svg" alt="Contato para Whatsapp"></a>
+                        </div>
 
+                    </div>
                 {% endfor %}
             </div>
 
