@@ -54,6 +54,7 @@ main h4 {
 }
 
 main .cards {
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 24px;
@@ -88,4 +89,18 @@ main .cards .card p {
     font-size: 16px;
     line-height: 26px;
     color: #6C6C80;
+}
+
+main .cards .card .contact {
+    display: flex;
+    margin-top: 16px;
+}
+
+main .cards .card .contact a + a {
+    margin-left: 64px;
+}
+
+main .cards .card .contact img {
+    width: 64px;
+    height: 64px;
 }
